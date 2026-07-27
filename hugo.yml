@@ -1,10 +1,9 @@
-baseURL: https://thmsn.xyz/
 locale: en-us
 title: Alan Thomson
 theme: PaperMod
 
 defaultContentLanguage: en
-defaultContentLanguageInSubdir: true
+defaultContentLanguageInSubdir: false
 disableDefaultLanguageRedirect: false
 
 params:
@@ -65,6 +64,7 @@ languages:
     label: "English"
     weight: 1
     locale: en-us
+    baseURL: https://thmsn.xyz/
     contentDir: content/english
     taxonomies:
       category: categories
@@ -91,6 +91,7 @@ languages:
     label: "日本語"
     locale: ja-jp
     weight: 2
+    baseURL: https://jp.thmsn.xyz/
     contentDir: content/japanese
     title: トムソン　アラン
     taxonomies:
