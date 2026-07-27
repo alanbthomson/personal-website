@@ -2,5 +2,28 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "",
   "buildCommand": "chmod a+x build.sh && ./build.sh",
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+
+  "rewrites": [
+    {
+      "has": [
+        {
+          "type": "host",
+          "value": "jp.thmsn.xyz"
+        }
+      ],
+      "source": "/(.*)",
+      "destination": "/ja/$1"
+    },
+    {
+      "has": [
+        {
+          "type": "host",
+          "value": "thmsn.xyz"
+        }
+      ],
+      "source": "/(.*)",
+      "destination": "/en/$1"
+    }
+  ]
 }
