@@ -66,10 +66,6 @@ languages:
     locale: en-us
     baseURL: https://thmsn.xyz/
     contentDir: content/english
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
     # menu:
     #   main:
     #     - name: About
@@ -94,10 +90,6 @@ languages:
     baseURL: https://jp.thmsn.xyz/
     contentDir: content/japanese
     title: トムソン　アラン
-    taxonomies:
-      category: JAcategories
-      tag: JAtags
-      series: JAseries
     # menu:
     #   main:
     #     - name: Archive
