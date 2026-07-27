@@ -104,6 +104,12 @@ main() {
   # Build the project
   echo "Building the project..."
   hugo build --gc --minify
+
+
+  # Post-build steps
+
+  # Copy English 404 page to root
+  cp /en/404.html /404.html
 }
 
 main "$@"
