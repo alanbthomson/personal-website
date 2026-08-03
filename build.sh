@@ -109,7 +109,7 @@ main() {
   # Post-build steps
 
   # Copy English 404 page to root
-  cp /en/404.html /404.html
+  cp en/404.html 404.html
 }
 
 main "$@"
