@@ -1,0 +1,31 @@
+{{- $game := .Get "game" -}} {{- $width := .Get "width" | default "100%" -}} {{-
+$height := .Get "height" | default "720" -}} {{- $border := .Get "border" |
+default "12px" -}}
+
+<style>
+    .itch-container {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .itch-container iframe {
+        width: 100%;
+        max-width: 1280px;
+        /*aspect-ratio: 16 / 9;*/
+        border: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+</style>
+
+<div class="itch-container">
+    <iframe
+        frameborder="0"
+        src="https://itch.io/embed-upload/{{ $game }}?color=333333"
+        width="{{ $width }}"
+        height="{{ $height }}"
+        allowfullscreen=""
+        loading="lazy"
+    >
+    </iframe>
+</div>

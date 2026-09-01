@@ -1,0 +1,8 @@
+---
+date: "{{ .Date }}"
+draft: true
+title: '{{ replace .File.ContentBaseName "-" " " | title }}'
+summary: 'Summary here.'
+categories: projects
+tags:
+---

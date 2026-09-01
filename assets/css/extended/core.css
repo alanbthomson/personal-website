@@ -1,0 +1,27 @@
+/*
+This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+
+Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
+*/
+
+:root {
+    --theme: #fbfaf7; /* paper background */
+    --entry: #f1f3f2;
+    --primary: #1b1d1f;
+    --secondary: #676b70;
+    --border: #dddcd7;
+}
+
+:root[data-theme="dark"] {
+    --theme: #151617;
+    --primary: #f0efeb;
+    --secondary: #a9adb2;
+    --border: #333638;
+}
+
+.post-title,
+.page-header h1,
+.entry-header h2 {
+    font-family: var(--j-serif);
+    font-weight: 400;
+}

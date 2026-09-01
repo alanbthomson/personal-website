@@ -1,0 +1,14 @@
+construction:
+  title: "Under Construction"
+  description: "In the meantime, view some projects at:"
+
+links:
+  projects:
+    text: "Projects"
+    link: "projects"
+
+socials:
+  - name: "Github"
+    url: "https://github.com/alanbthomson"
+  - name: "Linkedin"
+    url: "https://linkedin.com/in/alanbthomson"

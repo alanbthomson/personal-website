@@ -1,0 +1,8 @@
+construction:
+  title: "作成中"
+  description: "それまでの間、こちらのページでいくつかのプロジェクトをご覧ください："
+
+links:
+  projects:
+    text: "プロジェクト"
+    link: "projects"

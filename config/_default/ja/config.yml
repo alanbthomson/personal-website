@@ -1,0 +1,26 @@
+languages:
+  ja:
+    label: "日本語"
+    locale: ja-jp
+    weight: 2
+    baseURL: https://jp.thmsn.xyz/
+    contentDir: content/japanese
+    title: "トムソン　アラン"
+    menu:
+      main:
+        # - identifier: about
+        #   name: About
+        #   url: /about/
+        #   weight: 10
+        - identifier: projects
+          name: プロジェクト
+          url: /projects/
+          weight: 20
+        - identifier: tags
+          name: タグ
+          url: /tags/
+          weight: 30
+        # - identifier: example
+        #   name: Example.org
+        #   url: https://example.org
+        #   weight: 40

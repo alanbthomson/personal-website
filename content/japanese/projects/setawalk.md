@@ -1,17 +1,19 @@
-+++
-date = '2026-05-29T21:28:29+09:00'
-title = 'Setawalk'
-type = 'project'
-tags = ['web', 'frontend', 'backend']
-backendTechs = ['PostgreSQL', 'PostGIS']
-frontendTechs = 'Flutter'
-+++
+---
+date: 2026-05-29T21:28:29+09:00
+title: Setawalk
+summary: 'Get directions for the path less traveled, based on your preferences.'
+categories: projects
+tags:
+  - web
+  - frontend
+  - backend
+---
 
-## 探検家のためのナビゲーションアプリ
+## A navigation app for explorers
 
-### Setawalkは、あなたの好みに合わせて、人里離れた道への道案内を提供します。
+### Setawalk give you directions for the path less traveled, based on your preferences.
 
 
-## 使用技術
-- バックエンド：PostgreSQL、PostGIS
-- フロントエンド：Flutter
+## Technologies Used
+- Backend: PostgreSQL, PostGIS
+- Frontend: Flutter

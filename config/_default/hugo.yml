@@ -1,0 +1,51 @@
+locale: en-us
+title: Alan Thomson
+theme:
+  - PaperMod
+  - CustomShortcodes
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+disableDefaultLanguageRedirect: false
+
+params:
+  # site-wide config
+  defaultTheme: auto
+  # showShareButtons: true
+  displayFullLangName: true
+
+  assets:
+    favicon: "/favicon/favicon.ico"
+    favicon16x16: "/favicon/favicon-16x16.png"
+    favicon32x32: "/favicon/favicon-32x32.png"
+    apple_touch_icon: "/favicon/apple-touch-icon.png"
+    safari_pinned_tab: "/favicon/safari-pinned-tab.svg"
+
+  # frontpage config
+  profileMode:
+    enabled: true
+    title: "<Title>" # optional default will be site title
+    subtitle: "This is subtitle"
+    imageUrl: "landing/graffcolorsquare.png" # optional
+    imageTitle: "<title of image as alt>" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    buttons:
+      - name: Archive
+        url: "/archive"
+      - name: Github
+        url: "https://github.com/"
+
+  # homeInfoParams:
+  #   Title: Hi there wave
+  #   Content: Can be Info, links, about...
+
+  socialIcons: # optional
+    - name: "github"
+      url: "https://github.com/alanbthomson"
+    - name: "linkedin"
+      url: "https://linkedin.com/in/alanbthomson"
+
+caches:
+  images:
+    dir: :cacheDir/images
