@@ -1,18 +1,12 @@
 {{- define "main" -}} {{ $x := "what" }} {{- $lang := .Site.Language.Lang -}}
 {{- $copy := index .Site.Data.home $lang -}}
 
-<!--<div id="homepage">
-    <h2>Under Construction</h2>
-    <p class="inline-block">In the meantime, view some projects at:</p>
-    <a href="projects" class="inline-block">Projects</a>
-</div>-->
-
 <div id="homepage">
     <div class="construction-notice">
         <h1>{{ $copy.construction.title }}</h1>
-        <div class="description">
-            <p class="inline-block">{{ $copy.construction.description }}</p>
-            <a href="{{ $copy.links.projects.link }}" class="inline-block"
+        <div class="construction-description">
+            <p>{{ $copy.construction.description }}</p>
+            <a href="{{ $copy.links.projects.link }}"
                 >{{ $copy.links.projects.text }}</a
             >
         </div>
@@ -20,8 +14,12 @@
     {{- partial "social_icons.html" -}}
 </div>
 <style>
-    .inline-block {
-        display: inline-block;
+    .construction-description {
+        display: flex;
+        align-items: center;
+        gap: 0 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #homepage {
