@@ -7,6 +7,7 @@ tags:
   - gamedev
   - backend
   - hackathon
+featured: true
 # cover:
 #   image: "landing/graffcolorsquare.png"
 #   # can also paste direct link from external site
@@ -15,6 +16,17 @@ tags:
 #   caption: "<text>"
 #   relative: true # To use relative path for cover image, used in hugo Page-bundles
 ---
+
+## Overview
+
+## Tools
+
+## Challenges
+
+## Tech Stack
+Godot, GDScript
+
+
 
 ## Play the Game
 

@@ -1,12 +1,13 @@
 ---
 date: 2026-05-29T21:28:29+09:00
-title: Setawalk
+title: 世田ウオーク
 summary: 'Get directions for the path less traveled, based on your preferences.'
 categories: projects
 tags:
   - web
   - frontend
   - backend
+featured: true
 ---
 
 ## A navigation app for explorers

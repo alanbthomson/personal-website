@@ -1,0 +1,33 @@
+.construction-description {
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hp-posts {
+    margin-top: 20px;
+}
+
+.post-list {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.hp-posts .post-entry {
+    width: 20%;
+    /*border: solid;*/
+    /*border-radius: 1cap;*/
+}
+
+#homepage {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

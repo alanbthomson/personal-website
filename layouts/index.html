@@ -1,35 +1,37 @@
-{{- define "main" -}} {{ $x := "what" }} {{- $lang := .Site.Language.Lang -}}
-{{- $copy := index .Site.Data.home $lang -}}
+{{- define "main" -}}
+    {{ $x := "what" }}
+    {{- $lang := .Site.Language.Lang -}}
+    {{- $copy := index .Site.Data.home $lang -}}
+    {{- $recent_projects := first 4 (where
+        .Site.RegularPages.ByDate.Reverse "Section" "projects")
+    -}}
+    {{ $featured_projects := where site.RegularPages ".Params.featured" true }}
 
-<div id="homepage">
-    <div class="construction-notice">
-        <h1>{{ $copy.construction.title }}</h1>
-        <div class="construction-description">
-            <p>{{ $copy.construction.description }}</p>
-            <a href="{{ $copy.links.projects.link }}"
-                >{{ $copy.links.projects.text }}</a
-            >
+
+    <div id="homepage">
+        <div class="construction-notice">
+            <h1>{{ $copy.construction.title }}</h1>
+            <div class="construction-description">
+                <p>{{ $copy.construction.description }}</p>
+                <a href="{{ $copy.links.projects.link }}"
+                    >{{ $copy.links.projects.text }}</a
+                >
+            </div>
+        </div>
+        {{- partial "social_icons.html" -}}
+        <div class="hp-posts">
+            <h2>{{ $copy.posts.featured.title }}</h2>
+            <div class="post-list">
+                {{- range $featured_projects }}
+                    {{ partial "post_entry.html" . }}
+                {{- end }}
+            </div>
+            <!--<h2>{{ $copy.posts.recent.title }}</h2>
+            <div class="post-list">
+                {{- range $recent_projects }}
+                {{ partial "post_entry.html" . }}
+            {{- end }}
+            </div>-->
         </div>
     </div>
-    {{- partial "social_icons.html" -}}
-</div>
-<style>
-    .construction-description {
-        display: flex;
-        align-items: center;
-        gap: 0 0.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #homepage {
-        min-height: 75vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-</style>
-
 {{- end -}}

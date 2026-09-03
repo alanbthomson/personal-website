@@ -7,6 +7,7 @@ tags:
   - web
   - frontend
   - backend
+featured: true
 ---
 
 ## A navigation app for explorers

@@ -1,8 +1,14 @@
 construction:
-  title: "作成中"
-  description: "それまでの間、こちらのページでいくつかのプロジェクトをご覧ください："
+    title: "作成中"
+    description: "こちらのページでいくつかのプロジェクトをご覧ください："
 
 links:
-  projects:
-    text: "プロジェクト"
-    link: "projects"
+    projects:
+        text: "プロジェクト"
+        link: "projects"
+
+posts:
+    featured:
+        title: "Featured"
+    recent:
+        title: "Recent"

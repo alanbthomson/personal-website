@@ -1,25 +1,25 @@
 languages:
-  en:
-    label: "English"
-    weight: 1
-    locale: en-us
-    baseURL: https://thmsn.xyz/
-    contentDir: content/english
-    menu:
-      main:
-        # - identifier: about
-        #   name: About
-        #   url: /about/
-        #   weight: 10
-        - identifier: projects
-          name: Projects
-          url: /projects/
-          weight: 20
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 30
-        # - identifier: example
-        #   name: Example.org
-        #   url: https://example.org
-        #   weight: 40
+    en:
+        label: "English"
+        weight: 5
+        locale: en-us
+        baseURL: https://thmsn.xyz/
+        contentDir: content/english
+        menu:
+            main:
+                # - identifier: about
+                #   name: About
+                #   url: /about/
+                #   weight: 10
+                - identifier: projects
+                  name: Projects
+                  url: /projects/
+                  weight: 20
+                - identifier: tags
+                  name: Tags
+                  url: /tags/
+                  weight: 30
+                # - identifier: example
+                #   name: Example.org
+                #   url: https://example.org
+                #   weight: 40

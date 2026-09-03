@@ -6,4 +6,5 @@ categories: projects
 tags:
   - gamedev
   - backend
+featured: true
 ---
