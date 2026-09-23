@@ -1,8 +1,8 @@
 ---
 date: 2026-04-22T21:28:29+09:00
-title: 世田ウォーク
-summary: 'A Flutter navigation app using PostgreSQL and a custom algorithm to generate routes based on user preferences.'
-description: 'A navigation app for explorers, built with PostGIS and Flutter.'
+title: Setawalk
+summary: 'PostgreSQLと独自のアルゴリズムを用いて、ユーザーの好みに基づいてルートを生成するFlutter製ナビゲーションアプリ。'
+description: 'PostGISとFlutterで構築された、探検家向けのナビゲーションアプリ。'
 categories:
   - backend
   - web
@@ -17,31 +17,81 @@ cover:
   image: "images/setawalk/cover.webp"
   # can also paste direct link from external site
   # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
-  alt: "Image of application showing a route generated for a user, along with visualizations of database data on a map."
-  caption: "From left to right: Custom POI map, User interface showing a generated route, Raw OpenStreetMap data."
+  alt: "ユーザー向けに生成されたルートと、地図上に表示されたデータベースデータの可視化を示すアプリの画像。"
+  caption: "左から右へ：カスタムPOIマップ、生成されたルートを表示するUI、OpenStreetMapの生データ。"
   relative: true # To use relative path for cover image, used in hugo Page-bundles
 ---
 
-## 一覧
-This was the final graduation project for my Computer Science degree.
-The goal of this project was to create a new product for a niche that is underserved.
+## 概要
+これは、私がコンピュータサイエンスの学位取得に向けた最終卒業プロジェクトとして、4人のチームで開発したものです。私は主にバックエンドのデータベースと経路探索アルゴリズムを担当し、開発作業の約80％を担いました。
 
-## Features
-Users can select a starting point and destination, provide relative preferences for categories of points of interest, and the application will generate a path.
+このプロジェクトの目的は、単に目的地への最短ルートを探すのではなく、周辺を探索したい人向けのナビゲーションアプリを作成することでした。
 
-## Implementation
-### Database
-### Algorithm
-###
+「Setawalk」では、ユーザーは出発地と目的地を選択し、さまざまなカテゴリの観光スポットに対する好みを調整することで、道中で立ち寄って楽しめそうな場所を取り入れた徒歩ルートを生成することができます。
 
+## 機能
 
-## Challenges
-- Learning a new scripting language to process requests directly on the database
--
+- 2つの地点間の徒歩ルートを生成します。
+- 神社、ショッピング、カフェ、公園に対する相対的な好みを設定できます。
+- 探索に費やしてもよい追加時間を調整できます。
+- ユーザーの設定をクラウドアカウントに保存できます。
+- 選択したスポットと生成されたルートを地図上で確認できます。
+- ターンバイターンの徒歩案内を受け取れます。
 
-## Outcomes
+## 実装
+### データベース
 
+バックエンドでは、PostGIS および pgRouting を備えた PostgreSQL を使用して、地理データを保存し、徒歩ルートを計算しています。
 
-## Technologies Used
-- Backend: PostgreSQL, PostGIS, pgRouting, PL/pgSQL, Supabase
-- Frontend: Flutter, Dart
+OpenStreetMap のデータを PostgreSQL データベースにインポートし、歩行者ルートネットワークとして処理しました。注目地点は別途保存され、最も近い歩行者ルートノードを指すレコードが割り当てられました。
+
+これらの注目地点を接続するために、デローネイ三角分割を用いてグラフが生成されました。その後、各接続には、ダイクストラのアルゴリズムを用いて pgRouting で計算された徒歩距離が関連付けられました。
+
+これにより、アプリケーションは注目地点を「立ち寄りの候補となる地点のネットワーク」として扱いながら、それらの間の実際の徒歩経路の計算には、基盤となる歩行者ネットワークを引き続き利用できるようになりました。
+
+### アルゴリズム
+
+経路生成アルゴリズムは、一般的な最短経路探索と、ユーザーの好みに基づくPOI（注目地点）の選択を組み合わせています。
+
+出発点と目的地が指定されると、アルゴリズムはまず点Aと点Bの間に「直線距離」の直線を生成します。次に、出発点をナビゲーションネットワーク上の最も近いノードに変換し、進行方向にある各潜在的なPOI接続先へのダイクストラ経路を生成します。
+
+続いて、アルゴリズムは以下の要素に基づいてPOIの立ち寄り先を選択します：
+
+- 各カテゴリに対するユーザーの嗜好。
+- 各カテゴリの相対的な充足度。
+- 検討対象のPOIと目的地との相対的な角度。
+- 現在のPOIからの距離。
+- 目的地までの残り距離。
+このアルゴリズムは、ルートの進行に伴い、直線からの許容偏差を徐々に縮小します。これにより、旅の序盤では探索を促進しつつ、最終的には目的地へと戻るルートを確保します。
+
+また、サティエティシステムにより、すでに訪問済みのカテゴリに対する実質的な選好度が低下し、ユーザーの選好に比例して多様な場所をルートに含めるよう促します。
+
+### フロントエンド
+
+フロントエンドはFlutterを使用して開発され、地図の可視化や位置検索のためにGoogle Mapsと連携しています。
+
+Supabaseを使用してバックエンドと通信し、経路生成のリクエストや、ユーザーの好みを経路生成システムへ渡すなどの処理を行っています。
+
+アプリケーションは、クライアント側で返された経路の座標を処理し、歩行距離、推定所要時間、およびターンバイターンの案内を算出します。方向転換は、経路に沿った方向の変化を分析することで検出されます。
+
+## 課題
+
+- PostGISとpgRoutingを使用して地理データを取得・処理する方法を習得すること。
+- ユーザーの好みを考慮しつつ、現実的な徒歩ルート案内にバランスよく反映させるルート生成アルゴリズムの開発。
+- デローネ三角分割を用いて、注目地点間の接続ネットワークを生成すること。
+- より複雑なデータベース側のロジックを実装するためのPL/pgSQLの習得。
+- カスタム経路探索システムをモバイルアプリケーションおよび地図可視化機能と統合すること。
+
+## 成果
+
+このプロジェクトを通じて、バックエンドとフロントエンドの両方にわたるGISアプリケーションの設計および実装の経験を積むことができました。
+
+空間データベース、PostgreSQL、グラフベースの経路探索、そして従来のナビゲーションを超えたアプリケーションをサポートするために地理データをどのように処理できるかについて、より深い理解を得ることができました。
+
+また、アプリケーションのロジックの大部分をデータベースが担うプロジェクトの開発経験も得ることができました。
+
+## 使用した技術
+- バックエンド：PostgreSQL、PostGIS、pgRouting、PL/pgSQL、Supabase
+- フロントエンド：Flutter、Dart
+- API：Google Maps Platform
+- データ：OpenStreetMap
