@@ -1,12 +1,13 @@
 ---
 date: '2026-07-27T15:19:34+09:00'
 title: 'Cookoff'
-summary: 'A submission to the Brainless Game Jam.'
-categories: projects
-tags:
-  - gamedev
-  - backend
+summary: 'Online game jam with the theme "little guys." Player commands units to cook dishes in an RTS cooking sim.'
+categories:
+  - Game Dev
   - hackathon
+tags:
+  - godot
+  - gdscript
 featured: true
 # cover:
 #   image: "landing/graffcolorsquare.png"
