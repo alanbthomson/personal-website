@@ -15,10 +15,14 @@ languages:
                   name: Projects
                   url: /projects/
                   weight: 20
+                - identifier: categories
+                  name: Categories
+                  url: /categories/
+                  weight: 30
                 - identifier: tags
                   name: Tags
                   url: /tags/
-                  weight: 30
+                  weight: 40
                 # - identifier: example
                 #   name: Example.org
                 #   url: https://example.org

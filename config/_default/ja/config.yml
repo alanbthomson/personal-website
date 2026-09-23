@@ -16,10 +16,14 @@ languages:
                   name: プロジェクト
                   url: /projects/
                   weight: 20
+                - identifier: categories
+                  name: カテゴリー
+                  url: /categories/
+                  weight: 30
                 - identifier: tags
                   name: タグ
                   url: /tags/
-                  weight: 30
+                  weight: 40
                 # - identifier: example
                 #   name: Example.org
                 #   url: https://example.org

@@ -22,19 +22,19 @@ params:
         safari_pinned_tab: "/favicon/safari-pinned-tab.svg"
 
     # frontpage config
-    profileMode:
-        enabled: true
-        title: "<Title>" # optional default will be site title
-        subtitle: "This is subtitle"
-        imageUrl: "landing/graffcolorsquare.png" # optional
-        imageTitle: "<title of image as alt>" # optional
-        imageWidth: 120 # custom size
-        imageHeight: 120 # custom size
-        buttons:
-            - name: Archive
-              url: "/archive"
-            - name: Github
-              url: "https://github.com/"
+    # profileMode:
+    #     enabled: true
+    #     title: "<Title>" # optional default will be site title
+    #     subtitle: "This is subtitle"
+    #     imageUrl: "landing/graffcolorsquare.png" # optional
+    #     imageTitle: "<title of image as alt>" # optional
+    #     imageWidth: 120 # custom size
+    #     imageHeight: 120 # custom size
+    #     buttons:
+    #         - name: Archive
+    #           url: "/archive"
+    #         - name: Github
+    #           url: "https://github.com/"
 
     # homeInfoParams:
     #   Title: Hi there wave
