@@ -12,15 +12,31 @@
 
 .post-list {
     margin-top: 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .post-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem 0.5rem;
+    }
 }
 
 .hp-posts .post-entry {
-    width: 20%;
-    /*border: solid;*/
-    /*border-radius: 1cap;*/
+    /*border: solid;
+    border-radius: 1cap;*/
+    margin: 0;
+}
+
+.hp-posts .entry-header {
+    white-space: nowrap;
+}
+
+.hp-posts .entry-hint-parent {
+    justify-content: center;
 }
 
 #homepage {
