@@ -10,3 +10,7 @@ tags:
   - python
   - pygame
 ---
+
+TODO: Content writeup
+
+For more information in the interim, feel free to [contact](mailto:portfolio@thmsn.xyz) me.

@@ -1,9 +1,16 @@
 ---
-date: "2025-08-29T18:34:42+09:00"
+date: "2025-03-29T18:34:42+09:00"
 title: 'TUJ Hackathon'
 summary: '8 hour low-level gamejam with the theme "The Game is a Lie"'
-categories: projects
-tags:
-  - hackathon
+description: '8 hour low-level gamejam with the theme "The Game is a Lie"'
+categories:
   - gamedev
+  - hackathon
+tags:
+  - python
+  - pygame
 ---
+
+TODO: コンテンツの作成
+
+それまでの間、詳細については、お気軽に[ご連絡](mailto:portfolio@thmsn.xyz)ください。

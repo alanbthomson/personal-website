@@ -45,6 +45,8 @@ params:
           url: "https://github.com/alanbthomson"
         - name: "linkedin"
           url: "https://linkedin.com/in/alanbthomson"
+        - name: "email"
+          url: "mailto:portfolio@thmsn.xyz"
 
 caches:
     images:

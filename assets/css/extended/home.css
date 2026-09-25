@@ -35,8 +35,17 @@
     white-space: nowrap;
 }
 
+.hp-posts .entry-content {
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+}
+
 .hp-posts .entry-hint-parent {
     justify-content: center;
+}
+
+.hp-more-button {
+    margin-top: 20px
 }
 
 #homepage {

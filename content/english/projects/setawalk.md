@@ -1,7 +1,7 @@
 ---
 date: 2026-04-22T21:28:29+09:00
 title: Setawalk
-summary: 'A Flutter navigation app using PostgreSQL and a custom algorithm to generate routes based on user preferences.'
+summary: 'A Flutter navigation app using PostgreSQL/PostGIS and a custom algorithm to generate routes based on user preferences.'
 description: 'A navigation app for explorers, built with PostGIS and Flutter.'
 categories:
   - backend

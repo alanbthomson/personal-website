@@ -9,7 +9,7 @@
 
 
     <div id="homepage">
-        <div class="construction-notice">
+        <!--<div class="construction-notice">
             <h1>{{ $copy.construction.title }}</h1>
             <div class="construction-description">
                 <p>{{ $copy.construction.description }}</p>
@@ -17,8 +17,17 @@
                     >{{ $copy.links.projects.text }}</a
                 >
             </div>
+        </div>-->
+
+        <div class="hp-intro">
+            <h2 class="hp-intro-head">{{ $copy.intro.headline }}</h2>
+            <p class="hp-intro-desc">{{ $copy.intro.description1 }}</p>
+            <p class="hp-intro-desc2">{{ $copy.intro.description2 }}</p>
+            <p class="hp-intro-location">{{ $copy.intro.location }}</p>
         </div>
+
         {{- partial "social_icons.html" -}}
+
         <div class="hp-posts">
             <h2>{{ $copy.posts.featured.title }}</h2>
             <div class="post-list">
@@ -32,6 +41,12 @@
                 {{ partial "post_entry.html" . }}
             {{- end }}
             </div>-->
+            <div class="hp-more-button">
+                {{ partial "button.html" (dict
+                    "name" "View all projects →"
+                    "url" "/projects"
+                )}}
+            </div>
         </div>
     </div>
 {{- end -}}
