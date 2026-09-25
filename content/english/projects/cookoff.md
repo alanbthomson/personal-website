@@ -2,6 +2,7 @@
 date: '2026-07-27T15:19:34+09:00'
 title: 'Cookoff'
 summary: 'Online game jam with the theme "little guys." Player commands units to cook dishes in an RTS cooking sim.'
+description: 'Online game jam with the theme "little guys." Player commands units to cook dishes in an RTS cooking sim.'
 categories:
   - Game Dev
   - hackathon
@@ -17,12 +18,6 @@ featured: true
 #   caption: "<text>"
 #   relative: true # To use relative path for cover image, used in hugo Page-bundles
 ---
-
-## Overview
-
-## Tools
-
-## Challenges
 
 ## Tech Stack
 Godot, GDScript

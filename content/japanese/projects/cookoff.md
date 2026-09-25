@@ -17,12 +17,6 @@ featured: true
 #   relative: true # To use relative path for cover image, used in hugo Page-bundles
 ---
 
-## Overview
-
-## Tools
-
-## Challenges
-
 ## Tech Stack
 Godot, GDScript
 
