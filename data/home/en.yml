@@ -6,7 +6,7 @@ construction:
 intro:
   headline: "Hi, I make things"
   description1: "I'm a software developer building games, applications, and more."
-  description2: "I like designing and implementing systems using {cs}, {python}, and {rust}."
+  description2: "I like designing and implementing systems using C#, {python}, and Rust."
   location: "Based in Tokyo, Japan since 2019."
   tags:
     cs:
