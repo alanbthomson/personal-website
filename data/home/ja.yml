@@ -5,8 +5,18 @@ construction:
 intro:
   headline: "こんにちは、ものづくりをしています"
   description1: "ゲームやアプリケーションなどを開発しているソフトウェア開発者です。"
-  description2: "C#、Python、Rustを使ってシステムを設計・実装するのが好きです。"
+  description2: "{cs}、{python}、{rust}を使ってシステムを設計・実装するのが好きです。"
   location: "2019年から日本の東京を拠点に活動しています。"
+  tags:
+    cs:
+      text: "C#"
+      link: "tags/c%23"
+    python:
+      text: "Python"
+      link: "tags/python"
+    rust:
+      text: "Rust"
+      link: "tags/rust"
 
 links:
     projects:
