@@ -23,11 +23,11 @@ This game was developed as part of the [Brainless Game Jam](https://itch.io/jam/
 The theme was announced as "little guys" and after some brainstorming, we came up with the idea of a cooking Real Time Strategy (RTS) game. Players control groups of little cooks who work together to complete stir-fry orders for customers.
 
 ## Features
-- Unit control, including selection and groups of units
-- Ingredient management and cooking simulation
-- Order ticket generation and dish grading system
-- Communication between UI elements and game logic
-- Game state management and high score tracking
+- Unit control, including selection and groups of units.
+- Ingredient management and cooking simulation.
+- Order ticket generation and dish grading system.
+- Communication between UI elements and game logic.
+- Game state management and high score tracking.
 
 ## Challenges
 The main challenges were the limited timeframe combined with helping my teammate learn a new toolset (Godot). This was a great learning opportunity for both of us, where we worked to balance development progress with building up each other's understanding of the toolset and game logic.
