@@ -10,13 +10,11 @@ tags:
   - godot
   - gdscript
 featured: true
-# cover:
-#   image: "landing/graffcolorsquare.png"
-#   # can also paste direct link from external site
-#   # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
-#   alt: "<alt text>"
-#   caption: "<text>"
-#   relative: true # To use relative path for cover image, used in hugo Page-bundles
+cover:
+  image: "images/cookoff/cover.webp"
+  alt: "Image showing the main menu of the Cookoff game, with title, start and exit buttons."
+  caption: "Main menu of the game, featuring a little cook and a freeze frame of gameplay."
+  relative: true # To use relative path for cover image, used in hugo Page-bundles
 ---
 
 ## Overview
@@ -44,8 +42,8 @@ One particularly interesting part of the project for me, was implementing a gene
 ## Play the Game
 The game is currently available on [itch.io](https://notkomiyaki.itch.io/cookoff).
 
-{{< itch
+<!--{{< itch
     game="18352517"
     width="1150"
-    height="660"
->}}
+    height="450"
+>}}-->

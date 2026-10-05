@@ -10,13 +10,11 @@ tags:
   - godot
   - gdscript
 featured: true
-# cover:
-#   image: "landing/graffcolorsquare.png"
-#   # can also paste direct link from external site
-#   # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
-#   alt: "<alt text>"
-#   caption: "<text>"
-#   relative: true # To use relative path for cover image, used in hugo Page-bundles
+cover:
+  image: "images/cookoff/cover.webp"
+  alt: "「Cookoff」ゲームのメインメニューを示す画像。タイトル、開始ボタン、終了ボタンが表示されている。"
+  caption: "ゲームのメインメニュー。小さな料理人と、ゲームプレイの静止画が特徴的だ。"
+  relative: true # To use relative path for cover image, used in hugo Page-bundles
 ---
 
 ## 概要
@@ -43,23 +41,3 @@ featured: true
 
 ## ゲームをプレイする
 このゲームは現在、[itch.io](https://notkomiyaki.itch.io/cookoff)で公開されています。
-
-DeepL.com（無料版）で翻訳しました。
-{{< itch
-    game="18352517"
-    width="1150"
-    height="660"
->}}
-
-
-<!--{{< highlight go "linenos=inline, hl_lines=3 6-8" >}}
-package main
-
-import "fmt"
-
-func main() {
-    for i := 0; i < 3; i++ {
-        fmt.Println("Value of i:", i)
-    }
-}
-{{< /highlight >}}-->
