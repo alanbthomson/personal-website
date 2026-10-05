@@ -8,7 +8,7 @@ categories:
 tags:
   - unity
   - c#
-featured: true
+featured: false
 ---
 
 TODO: コンテンツの作成
